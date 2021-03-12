@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-color: #f9f7fc; }
+
+.leftnav a{
+    display:none;
+}
+.leftnav-opened a{
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #6a6a6a !important;
+    font-weight: 700;
+}

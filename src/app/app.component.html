@@ -1,0 +1,15 @@
+<app-top-nav></app-top-nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="leftnav col-1"  [ngClass]="{'leftnav-opened': leftnav === 'open'}" (mouseover)="openLeftnav()" (mouseout)="closeLeftnav()">
+      <app-left-nav></app-left-nav>
+    </div>
+    <div class="tracks col-9">
+      <app-tracks></app-tracks>
+    </div>
+    <div class="tracks-summary col-2">
+      <app-tracks-summary></app-tracks-summary>
+    </div>
+  </div>
+</div>
+

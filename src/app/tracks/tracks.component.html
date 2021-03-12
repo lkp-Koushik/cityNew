@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col-4 main-header">Tracks</div>
+    <div class="col-3 text-right"> 
+        <i class="fa fa-search"> </i>
+        <input class="search-input" type="text" placeholder="Search">
+    </div>
+    <div class="col-3 sorting">
+        <label for="sort">Sort By:</label>
+        <select id="sort" name="carlist" form="carform">
+            <option value="latest">Latest</option>
+            <option value="old">Old</option>
+        </select>
+    </div>
+    <div class="col-2 toggle-view">
+        <i class="fa fa-th-large" aria-hidden="true"></i>
+        <i class="fa fa-list" aria-hidden="true"></i>
+    </div>
+</div>
+
+<div class="row">
+        <div class="custom-card col-3" *ngFor="let card of data;">
+            <div class="status row">
+                <div class="col-7 status-label" [ngClass]="{'in-progress': card.status === 'In Progress', 'draft': card.status === 'Draft', 'approved': card.status === 'Approved'}">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                    <label>{{card.status}}</label>
+                </div>
+                <div class="col-1">
+                  <i *ngIf="card.status === 'Approved'" (click)="showTrack()" class="fa fa-file-text-o" aria-hidden="true"></i>
+                </div>
+                <div class="col-1 offset-2 text-right dot-button">
+                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                            <mat-icon>more_vert</mat-icon>
+                          </button>
+                          <mat-menu #menu="matMenu">
+                            <button mat-menu-item>
+                              <mat-icon>dialpad</mat-icon>
+                              <span>Redial</span>
+                            </button>
+                            <button mat-menu-item disabled>
+                              <mat-icon>voicemail</mat-icon>
+                              <span>Check voice mail</span>
+                            </button>
+                            <button mat-menu-item>
+                              <mat-icon>notifications_off</mat-icon>
+                              <span>Disable alerts</span>
+                            </button>
+                          </mat-menu>
+                </div>
+            </div>
+            <div class="details row">
+                <div class="col-12 detail-header">{{card.track}}</div>
+                <div class="col-12 detail-descr">{{card.details}}</div>
+                <div class="col-12 scenarios"><span>{{card.scenariosCount}}</span>Scenarios</div>
+            </div>
+            <div class="action row">
+                <mat-accordion class="example-headers-align" multi>
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        View Tracks
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                  <div class="row details-track">
+                    <div class="track-det col-6">
+                      <label class="scenarios-acc">Draft</label>
+                      <label class="count">4</label>
+                    </div>
+                    <div class="track-det col-6">
+                      <label class="scenarios-acc">In Progress</label>
+                      <label class="count">2</label>
+                    </div>
+                    <div class="track-det col-6">
+                      <label class="scenarios-acc">Invalidated</label>
+                      <label class="count">2</label>
+                    </div>
+                    <div class="track-det col-6">
+                      <label class="scenarios-acc">Completed</label>
+                      <label class="count">1</label>
+                    </div>
+                  </div>
+                  </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </div>
+        <div class="col-6 offset-4 bottom-action">
+          <button type="button" class="col-3 offset-3 bottom-action-button create-track btn btn-primary">Create Track</button>
+          <button type="button" class="col-3 btn bottom-action-button btn-primary approve-track">Approve Track</button>
+        </div>
+</div>
+
+

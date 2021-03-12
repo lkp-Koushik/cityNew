@@ -1,0 +1,15 @@
+.top-nav{
+    background-color: #111166;
+    color: #fff;
+    padding: 10px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.logo{
+    max-width: 30px;
+    max-height: 30px;
+}
+.top-nav-wrapper{
+    margin: 0 auto;
+}
