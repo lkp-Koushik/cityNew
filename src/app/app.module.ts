@@ -7,9 +7,10 @@ import { TracksSummaryComponent } from './tracks-summary/tracks-summary.componen
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule} from '@angular/material/icon';
-import { MatMenuModule} from '@angular/material/menu';
-import { MatExpansionModule} from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 
@@ -29,6 +30,7 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
     MatIconModule,
     MatMenuModule,
     MatExpansionModule,
+    MatCardModule,
     ChartsModule
   ],
   providers: [],

@@ -151,7 +151,7 @@ select option{
 .action .mat-accordion{
     width: 100%;
 }
-.mat-expansion-panel-header-title{
+.mat-expansion-panel-header-title,.list-track{
     color: #15699b;
     font-size: 14px;
     font-weight: 500;
@@ -182,4 +182,28 @@ select option{
     font-weight: 700;
     display: block;
     margin-bottom: 0px;
+}
+/* Styles for list view */
+.mat-card{
+    padding: 10px 0;
+    margin:15px 0;
+}
+.badge{
+    min-width: 100%;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 10px;
+}
+.list-file-i{
+    margin-right: 30px;
+    font-size: 14px;
+    color: inherit;
+}
+.list-status-label{
+    max-width: 120px;
+    margin-left: 15px
+}
+.list-status-label i{
+   position: relative;
+   left: -5px;
 }

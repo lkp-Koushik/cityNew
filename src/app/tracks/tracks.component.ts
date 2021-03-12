@@ -10,10 +10,13 @@ import {MatAccordion} from '@angular/material/expansion';
 export class TracksComponent implements OnInit {
   @ViewChild(MatAccordion) accordion: MatAccordion;
   public data: Object[];
-  
+  public list:boolean;
+  public card:boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.card = true;
     this.data = [
       {
         status:'In Progress',track:'Track 1',details:'details will go here',scenariosCount:'3'
@@ -80,5 +83,13 @@ export class TracksComponent implements OnInit {
   showTrack(){
     alert('hello');
   }
+listView(){
+  this.card = false;
+  this.list = true;
+}
+cardView(){
+  this.card = true;
+  this.list = false;
+}
 
 }
