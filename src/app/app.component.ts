@@ -14,11 +14,11 @@ export class AppComponent {
   }
   openLeftnav(){
     this.leftnav='open';
-    console.log('opened');
+    //console.log('opened');
   }
   closeLeftnav(){
     this.leftnav='closed';
-    console.log('close');
+    //console.log('close');
   }
 }
 
