@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatAccordion} from '@angular/material/expansion';
+import { TrackDetailsService } from "../services/track-details.service";
 
 @Component({
   selector: 'app-tracks',
@@ -13,9 +14,15 @@ export class TracksComponent implements OnInit {
   public list:boolean;
   public card:boolean;
 
-  constructor() { }
+  constructor(private trackDetailsService: TrackDetailsService) {}
 
   ngOnInit(): void {
+     this.trackDetailsService.getTrackDtsl("url").subscribe(
+      data => console.log("data", data),
+      err => {
+        console.log("error ", err);
+      }
+    );
     this.card = true;
     this.data = [
       {
