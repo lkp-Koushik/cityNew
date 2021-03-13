@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatAccordion} from '@angular/material/expansion';
+import { MatAccordion } from '@angular/material/expansion';
 import { TrackDetailsService } from "../services/track-details.service";
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-tracks',
@@ -10,16 +11,16 @@ import { TrackDetailsService } from "../services/track-details.service";
 
 export class TracksComponent implements OnInit {
   @ViewChild(MatAccordion) accordion: MatAccordion;
-   public data: Array<any>[];
+  //public data: Array<any>[];
+  public data: any;
   public list:boolean;
   public card:boolean;
 
-  constructor(private trackDetailsService: TrackDetailsService) {}
+  constructor(private trackDetailsService: TrackDetailsService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
    this.trackDetailsService.getTrackDtsl("url").subscribe(
       response => {
-        debugger;
         this.data = response;
       },
       err => {
@@ -28,8 +29,9 @@ export class TracksComponent implements OnInit {
     );
     this.card = true;
   }
-  showTrack(){
-    alert('hello');
+  showTrack(track){
+   // alert(track)
+    this.dialog.open(TrackDialog,{ disableClose: true });
   }
 listView(){
   this.card = false;
@@ -41,3 +43,9 @@ cardView(){
 }
 
 }
+
+@Component({
+  selector: 'track-dialog',
+  templateUrl: 'track-dialog.html',
+})
+export class TrackDialog {}

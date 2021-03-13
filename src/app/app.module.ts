@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { TracksComponent } from './tracks/tracks.component';
+import { TracksComponent, TrackDialog } from './tracks/tracks.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TracksSummaryComponent } from './tracks-summary/tracks-summary.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -23,13 +24,15 @@ import { TrackDetailsService } from './services/track-details.service';
     TracksSummaryComponent,
     LeftNavComponent,
     TopNavComponent,
-    DoughnutChartComponent
+    DoughnutChartComponent,
+    TrackDialog
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatDialogModule,
     MatIconModule,
     MatMenuModule,
     MatExpansionModule,

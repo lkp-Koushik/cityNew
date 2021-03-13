@@ -159,6 +159,8 @@ select option{
 .mat-expansion-panel-header{
     padding-left: 15px;
     padding-right: 17px;
+    width: 20%;
+    margin-left: 80%;
 }
 .mat-expansion-panel-header:hover{
     background-color: #fff !important;
@@ -198,6 +200,7 @@ select option{
     margin-right: 30px;
     font-size: 14px;
     color: inherit;
+    cursor: pointer;
 }
 .list-status-label{
     max-width: 120px;
@@ -206,4 +209,20 @@ select option{
 .list-status-label i{
    position: relative;
    left: -5px;
+}
+.row-dot-button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: relative;
+    top: 7px;
+}
+.card-link{
+    position: relative;
+    top: 40px;
+    z-index: 2;
+    left: 15px;
+    color: #15699b;
+    font-size: 14px;
+    font-weight: 500;
 }

@@ -14,3 +14,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-c
     color: #6a6a6a !important;
     font-weight: 700;
 }
+.modal-close{
+    float: right;
+    position: relative;
+    top: -15px;
+    left: 15px;
+}
+.modal-close:hover{
+    cursor: pointer;
+}
+.mat-dialog-content p{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.mat-dialog-container{
+    max-width: 80%;
+    margin:auto;
+}
