@@ -13,7 +13,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
-
+import { HttpClientModule } from "@angular/common/http";
 import { TrackDetailsService } from './services/track-details.service';
 
 @NgModule({
@@ -29,6 +29,7 @@ import { TrackDetailsService } from './services/track-details.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatIconModule,
     MatMenuModule,
     MatExpansionModule,
