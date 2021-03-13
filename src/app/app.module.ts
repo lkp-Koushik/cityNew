@@ -14,6 +14,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 
+import { TrackDetailsService } from './services/track-details.service.ts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,7 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
     MatCardModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [TrackDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
