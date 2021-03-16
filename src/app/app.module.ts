@@ -40,6 +40,7 @@ import { TrackDetailsService } from './services/track-details.service';
     ChartsModule
   ],
   providers: [TrackDetailsService],
+  entryComponents: [TrackDialog],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
