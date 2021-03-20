@@ -15,6 +15,7 @@ export class TracksComponent implements OnInit {
   public data: any;
   public list:boolean;
   public card:boolean;
+  public showsortedTracks = 'all';
 
   constructor(private trackDetailsService: TrackDetailsService, public dialog: MatDialog) {}
 
@@ -28,6 +29,11 @@ export class TracksComponent implements OnInit {
       }
     );
     this.card = true;
+
+    this.trackDetailsService.viewName.subscribe(result =>{
+      this.showsortedTracks = result;
+      console.log(this.showsortedTracks);
+    });
   }
   showTrack(track){
    // alert(track)
@@ -41,6 +47,7 @@ cardView(){
   this.card = true;
   this.list = false;
 }
+
 
 }
 

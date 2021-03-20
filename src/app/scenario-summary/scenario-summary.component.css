@@ -1,0 +1,5 @@
+@import '../tracks-summary/tracks-summary.component.css';
+
+.individual-bar, .mixed-scenario .progress{
+    cursor: pointer;
+}

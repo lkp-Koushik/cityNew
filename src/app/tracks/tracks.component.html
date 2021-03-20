@@ -60,7 +60,7 @@
   </mat-card>
 </div>
 <div *ngIf="card" class="row">
-        <div class="custom-card col-3" *ngFor="let card of data;">
+        <div class="custom-card col-3" *ngFor="let card of data;" [ngClass]="card.status">
             <div class="status row">
                 <div class="col-7 status-label" [ngClass]="{'in-progress': card.status === 'In Progress', 'draft': card.status === 'Draft', 'approved': card.status === 'Approved'}">
                     <i class="fa fa-clock-o" aria-hidden="true"></i>

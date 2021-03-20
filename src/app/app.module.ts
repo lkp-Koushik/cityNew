@@ -16,6 +16,7 @@ import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { HttpClientModule } from "@angular/common/http";
 import { TrackDetailsService } from './services/track-details.service';
+import { ScenarioSummaryComponent } from './scenario-summary/scenario-summary.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TrackDetailsService } from './services/track-details.service';
     LeftNavComponent,
     TopNavComponent,
     DoughnutChartComponent,
-    TrackDialog
+    TrackDialog,
+    ScenarioSummaryComponent
   ],
   imports: [
     BrowserModule,
