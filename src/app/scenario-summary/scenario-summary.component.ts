@@ -15,7 +15,6 @@ export class ScenarioSummaryComponent implements OnInit {
 
   progressClick(value)
   {
-    alert(value);
     this.trackDetailsService.sortTrack(value);
   }
 }

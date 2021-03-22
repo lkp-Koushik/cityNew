@@ -1,4 +1,4 @@
-<div class="row d-flex align-items-center" style="margin-bottom: 30px;">
+<div class="row d-flex align-items-center" style="margin-bottom: 30px;margin-left:30px;">
     <div class="col-4 main-header">Tracks</div>
     <div class="col-3 text-right"> 
         <i class="fa fa-search"> </i>
@@ -59,7 +59,7 @@
     </div>
   </mat-card>
 </div>
-<div *ngIf="card" class="row">
+<div *ngIf="card" class="row" style="margin:0 30px;">
         <div class="custom-card col-3" *ngFor="let card of data;" [ngClass]="card.status">
             <div class="status row">
                 <div class="col-7 status-label" [ngClass]="{'in-progress': card.status === 'In Progress', 'draft': card.status === 'Draft', 'approved': card.status === 'Approved'}">

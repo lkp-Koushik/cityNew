@@ -16,13 +16,32 @@ export class TracksComponent implements OnInit {
   public list:boolean;
   public card:boolean;
   public showsortedTracks = 'all';
+  public allTracks:any;
+  public draftTracks:Array<any> = [];
+  public approvedTracks:Array<any> = [];
+  public inProgressTracks:Array<any> = [];
 
   constructor(private trackDetailsService: TrackDetailsService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
    this.trackDetailsService.getTrackDtsl("url").subscribe(
       response => {
+        this.allTracks = response;
         this.data = response;
+        for(let i=0; i<this.data.length;i++){
+          if(this.data[i].status == 'Draft'){
+            this.draftTracks.push(this.data[i]);
+          }
+          else if (this.data[i].status == 'Approved'){
+            this.approvedTracks.push(this.data[i]);
+          }
+          else if (this.data[i].status == 'In Progress'){
+            this.inProgressTracks.push(this.data[i]);
+          }
+        }
+        console.log('Draft>>>>',this.draftTracks);
+        console.log('Approved>>>>',this.approvedTracks);
+        console.log('In Progress>>>>',this.inProgressTracks);
       },
       err => {
         console.log(" exception whiel reading data form json file ", err);
@@ -33,10 +52,21 @@ export class TracksComponent implements OnInit {
     this.trackDetailsService.viewName.subscribe(result =>{
       this.showsortedTracks = result;
       console.log(this.showsortedTracks);
+      if(this.showsortedTracks == 'all'){
+        this.data = this.allTracks;
+      }
+      else if(this.showsortedTracks == 'InProgress'){
+        this.data = this.inProgressTracks;
+      }
+      else if(this.showsortedTracks == 'Approved'){
+        this.data = this.approvedTracks;
+      }
+      else if(this.showsortedTracks == 'Draft'){
+        this.data = this.draftTracks;
+      }
     });
   }
   showTrack(track){
-   // alert(track)
     this.dialog.open(TrackDialog,{ disableClose: true });
   }
 listView(){
