@@ -151,18 +151,18 @@ select option{
 .action .mat-accordion{
     width: 100%;
 }
-.mat-expansion-panel-header-title,.list-track{
+.action .mat-expansion-panel-header-title,.list-track{
     color: #15699b;
     font-size: 14px;
     font-weight: 500;
 }
-.mat-expansion-panel-header{
+.action .mat-expansion-panel-header{
     padding-left: 15px;
     padding-right: 17px;
     width: 20%;
     margin-left: 80%;
 }
-.mat-expansion-panel-header:hover{
+.action .mat-expansion-panel-header:hover{
     background-color: #fff !important;
 }
 .details-track{
@@ -226,4 +226,15 @@ select option{
     font-size: 14px;
     font-weight: 500;
 }
-
+.list-accordian .mat-expansion-panel{
+    margin:15px auto;
+}
+.list-accordian .mat-expansion-panel .mat-expansion-panel-header .mat-expansion-panel-header-title{
+    align-items: center;
+    margin-right: 0px;
+}
+.custom-body{
+    background-color: #aabeee59;
+    padding: 15px 15px;
+    margin: 0px -30px -20px -30px;
+}

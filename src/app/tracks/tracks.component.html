@@ -17,8 +17,73 @@
     </div>
 </div>
 <div *ngIf="list">
-  <mat-card *ngFor="let card of data;">
-    <div class="row d-flex align-items-center">
+  <!-- <mat-card *ngFor="let card of data;"> -->
+    <mat-accordion class="list-accordian" *ngFor="let card of data;">
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <div class="col-2 list-status-label">
+              <span class="badge badge-primary" [ngClass]="{'in-progress': card.status === 'In Progress', 'draft': card.status === 'Draft', 'approved': card.status === 'Approved'}">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i class="fa fa-file-o" aria-hidden="true"></i>{{card.status}}
+              </span>
+            </div>
+            <div class="col-3 offset-1">
+              <div class="col-12 detail-header">{{card.track}}</div>
+              <div class="col-12 detail-descr">{{card.details}}</div>
+            </div>
+            <div class="col-2 scenarios text-center">
+              <span>{{card.scenariosCount}}</span>Scenarios
+            </div>
+            <div class="col-2 list-track text-center">
+              View Tracks
+            </div>
+            <div class="col-2 text-center">
+              <i class="fa fa-file-text-o list-file-i"  (click)="showTrack()" aria-hidden="true"></i>
+               
+              <button class="row-dot-button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_horiz</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+            </div>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+         <div class="row custom-body">
+           <div class="text-center col-3">
+            <label class="scenarios-acc">Draft</label>
+            <label class="count">4</label>
+           </div>
+           <div class="text-center col-3">
+            <label class="scenarios-acc">In Progress</label>
+            <label class="count">6</label>
+           </div>
+           <div class="text-center col-3">
+            <label class="scenarios-acc">Invalidated</label>
+            <label class="count">3</label>
+           </div>
+           <div class="text-center col-3">
+            <label class="scenarios-acc">Completed</label>
+            <label class="count">10</label>
+           </div>
+          
+         </div>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+    <!-- <div class="row d-flex align-items-center">
       <div class="col-2 list-status-label">
         <span class="badge badge-primary" [ngClass]="{'in-progress': card.status === 'In Progress', 'draft': card.status === 'Draft', 'approved': card.status === 'Approved'}">
           <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -56,8 +121,8 @@
           </button>
         </mat-menu>
       </div>
-    </div>
-  </mat-card>
+    </div> -->
+  <!-- </mat-card> -->
 </div>
 <div *ngIf="card" class="row" style="margin:0 30px;">
         <div class="custom-card col-3" *ngFor="let card of data;" [ngClass]="card.status">
