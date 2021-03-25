@@ -17,6 +17,7 @@ import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.componen
 import { HttpClientModule } from "@angular/common/http";
 import { TrackDetailsService } from './services/track-details.service';
 import { ScenarioSummaryComponent } from './scenario-summary/scenario-summary.component';
+import { RecentTracksComponent } from './recent-tracks/recent-tracks.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ScenarioSummaryComponent } from './scenario-summary/scenario-summary.co
     TopNavComponent,
     DoughnutChartComponent,
     TrackDialog,
-    ScenarioSummaryComponent
+    ScenarioSummaryComponent,
+    RecentTracksComponent
   ],
   imports: [
     BrowserModule,

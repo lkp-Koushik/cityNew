@@ -1,0 +1,44 @@
+.main-label{
+    font-size:16px;
+    font-weight: 500;
+}
+.view-all{
+    color: #15699b;
+    font-size: 14px;
+    font-weight: 500;
+}
+.details-header{
+    font-size: 18px;
+    font-weight: bold;
+}
+.detail-descr{
+    font-size: 12px;
+    color: #868484;
+}
+.scenarios{
+    font-size: 15px;
+    color: #868484;
+}
+.scenarios span{
+    font-weight: bold;
+    color: #212529;
+    margin-right: 5px;
+}
+i{
+    color: #2e7bef;
+    font-size: 10px;
+}
+.status-label{
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+.fa-ellipsis-v{
+    position: relative;
+    left: -15px;
+    font-size: 14px;
+}
+hr{
+    width: 88%;
+    background-color: #bcbbbb30;
+}
