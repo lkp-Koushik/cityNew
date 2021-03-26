@@ -37,6 +37,11 @@
     margin-bottom: 0px;
     font-weight: 700;
 }
+.prod-tm-label{
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
 .description p{
     font-size: 11px;
     margin-bottom: 0px;
@@ -89,4 +94,72 @@
 }
 .bold{
     font-weight: 700;
+}
+.prod-tracks-main{
+    display: flex;
+    max-width: 240px;
+    flex-wrap: wrap;
+}
+.prod-tracks-first-row{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    align-items: center;
+}
+.left{
+    max-width: 40%;
+}
+.right{
+    max-width: 50%;
+}
+.i-status{
+    color: #60af87;
+    margin: 0 5px;
+}
+.left label{
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+.p-span{
+    font-size: 15px;
+    color: #868484;
+}
+.p-count{
+    font-weight: bold;
+    color: #212529;
+    margin-right: 5px;
+}
+.cd-flex{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+}
+.cd-flex .link{
+    color: #2e7bef;
+    font-size: 14px;
+    font-weight: 700;
+}
+.link i{
+    margin-right: 5px;
+}
+.more-user{
+    margin-left: 15px;
+}
+.avatar img{
+    max-height: 30px;
+    max-width: 30px;
+    border-radius: 50%;
+}
+.plus-more{
+    background-color: #d1c9c9;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 3px 2px;
+    text-align: left;
+    font-weight: 800;
+    margin-left: 10px;
+}
+.line{
+    border-right: 1px solid #dddddd;
+    margin: 0 20px 0px 0px;
 }
