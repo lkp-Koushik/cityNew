@@ -1,0 +1,92 @@
+.main-label{
+    font-size: 30px;
+    font-weight: bold;
+}
+.prod-tracks{
+    box-shadow: -1px 0px 10px 0 #8d858580;
+    border-radius: 5px;
+    min-height: 200px;
+    margin: 15px auto;
+}
+.prod-tracks-bottom{
+    padding: 0;
+    margin: 0;
+}
+.sub-label{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.prod-track-container{
+    display: flex;
+}
+.single-prod-track{
+    display: flex;
+    max-width: 185px;
+    flex-wrap: wrap;
+    margin: 0 15px 15px 15px;
+    padding: 10px;
+    min-height: 220px;
+    box-shadow: -1px 0px 10px 0 #8d858580;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.prod-t-label{
+    font-size: 17px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+.description p{
+    font-size: 11px;
+    margin-bottom: 0px;
+    color: #868484;
+}
+.status p{
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.long-description p{
+    font-size: 13px;
+    margin-bottom: 0px;
+    color: #868484;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.view{
+    display: flex;
+    width: 100%;
+}
+.view a{
+    font-size: 14px;
+    font-weight: 700;
+    color: #15699b;
+    margin: auto;
+}
+.green{
+    border-top: 4px solid #60af87;
+}
+.blue{
+    border-top: 4px solid #2e7bef;
+}
+.bottom-div{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: -1px 0px 10px 0 #8d858580;
+    margin: 0px auto;
+    max-width: 49%;
+}
+.table-div{
+    max-height: 300px;
+    overflow: auto;
+}
+.fa-pencil,.fa-file{
+    color: #2e7bef;
+    font-size: 14px;
+}
+.bold{
+    font-weight: 700;
+}

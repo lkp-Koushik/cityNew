@@ -31,3 +31,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;background-c
     max-width: 80%;
     margin:auto;
 }
+.mat-tab-label:focus {
+    color: #2e7bef !important;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: #2e7bef;
+    height: 3px;
+}

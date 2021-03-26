@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
@@ -18,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { TrackDetailsService } from './services/track-details.service';
 import { ScenarioSummaryComponent } from './scenario-summary/scenario-summary.component';
 import { RecentTracksComponent } from './recent-tracks/recent-tracks.component';
+import { NewTracksComponent } from './new-tracks/new-tracks.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { RecentTracksComponent } from './recent-tracks/recent-tracks.component';
     DoughnutChartComponent,
     TrackDialog,
     ScenarioSummaryComponent,
-    RecentTracksComponent
+    RecentTracksComponent,
+    NewTracksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { RecentTracksComponent } from './recent-tracks/recent-tracks.component';
     MatDialogModule,
     MatIconModule,
     MatMenuModule,
+    MatTabsModule,
     MatExpansionModule,
     MatCardModule,
     ChartsModule
