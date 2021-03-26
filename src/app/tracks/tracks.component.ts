@@ -78,6 +78,15 @@ cardView(){
   this.list = false;
 }
 
+filterBy(evt){
+  if(evt.target.value === 'draft')
+    this.data = this.draftTracks;
+  else if(evt.target.value === 'approved')
+    this.data = this.approvedTracks;
+  else if(evt.target.value === 'inProgress')
+    this.data = this.inProgressTracks;
+}
+
 
 }
 

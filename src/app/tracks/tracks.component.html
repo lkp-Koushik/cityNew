@@ -5,10 +5,12 @@
         <input class="search-input" type="text" placeholder="Search">
     </div>
     <div class="col-3 sorting">
-        <label for="sort">Sort By:</label>
-        <select id="sort" name="carlist" form="carform">
-            <option value="latest">Latest</option>
-            <option value="old">Old</option>
+        <label for="sort">Filter By:</label>
+        <select id="sort" name="carlist" form="carform" (change)=filterBy($event)>
+            <option value="All">All</option>
+            <option value="inProgress">In Progress</option>
+            <option value="draft">Draft</option>
+            <option value="approved">Approved</option>
         </select>
     </div>
     <div class="col-2 toggle-view">
