@@ -15,6 +15,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { HttpClientModule } from "@angular/common/http";
 import { TrackDetailsService } from './services/track-details.service';
 import { ScenarioSummaryComponent } from './scenario-summary/scenario-summary.component';
@@ -44,6 +45,7 @@ import { NewTracksComponent } from './new-tracks/new-tracks.component';
     MatMenuModule,
     MatTabsModule,
     MatExpansionModule,
+    MatCarouselModule,
     MatCardModule,
     ChartsModule
   ],
